@@ -1,0 +1,28 @@
+version: '3.3'
+
+services:
+
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password1
+      MYSQL_DATABASE: miniHR
+      MYSQL_USER: taha
+      MYSQL_PASSWORD: password1
+
+    volumes:
+        - ./init1:/docker-entrypoint-initdb.d
+
+
+    networks:
+      netBackEnd:
+        ipv4_address: 192.168.0.4
+
+
+networks:
+    netBackEnd:
+        ipam:
+            driver: default
+            config:
+                 - subnet: 192.168.0.0/24

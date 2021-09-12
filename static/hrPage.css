@@ -1,0 +1,20 @@
+#container_inner{
+    width:100%;
+    margin: 100px auto auto auto;
+    padding: 10px;
+}
+
+.row_me {
+    display: grid;
+    grid-template-columns: 2fr repeat(4, 1fr);
+    column-gap: 10px;
+    row-gap: 40px;
+}
+span{
+    border-right: 1px rgb(129, 129, 129) solid;
+}
+.header_row {
+    font-size: x-large;
+    margin-bottom: -8px;
+    font-weight: bold;
+}

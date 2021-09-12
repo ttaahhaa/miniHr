@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<title>HR mini</title>
+
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'> <!-- Body font -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'> <!-- Navbar font -->
+		<link rel="stylesheet" href="../static/bootstrap.min.css">
+		<link rel="stylesheet" href="../static/style.css">
+		<link rel="stylesheet" href="../static/cool-gray.css">
+        <link rel="stylesheet" href="../static/index.css">
+
+	</head>
+
+    <body data-spy="scroll" data-target="#main-navbar">
+    	<div class="body">
+
+            <!--========== BEGIN HEADER ==========-->
+            <header id="header" class="header-main">
+
+                <!-- Begin Navbar -->
+                <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation"> <!-- Classes: navbar-default, navbar-inverse, navbar-fixed-top, navbar-fixed-bottom, navbar-transparent. Note: If you use non-transparent navbar, set "height: 98px;" to #header -->
+
+                  <div class="container">
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a class="page-scroll" href="/">Home</a></li>
+                            <li><a class="page-scroll" href="/applicant">Apply</a></li>
+                            <li><a class="page-scroll" href="/hr">show Applications</a></li>
+
+                        </ul>
+                    </div>
+                  </div>
+                </nav>
+                <!-- End Navbar -->
+
+            </header>
+
+
+<div class="testbox">
+    <form action="/postApplication" method="POST" id="form"  enctype="multipart/form-data">
+        <div class="banner">
+            <h1>Job Application Form</h1>
+        </div>
+        <p class="top-info">Thank you for your interest in working with us. Please check below for available job
+            opportunities that meet your criteria and send your application by filling out the Job Application Form.</p>
+        <div class="item">
+            <p>Name<span class="">*</span></p>
+            <div class="name-item">
+                <input type="text" id="firstName" placeholder="First" />
+                <input type="text" id="lastName" placeholder="Last" />
+            </div>
+        </div>
+        <div class="contact-item">
+            <div class="item">
+                <p>Email<span class="">*</span></p>
+                <input type="email" id="email" />
+            </div>
+            <div class="item">
+                <p>Years of Experience<span class="">*</span></p>
+                <input type="number" id="yearsOfExperience" />
+            </div>
+        </div>
+        <div class="position-item">
+            <div class="item">
+                <p>Department ID<span class="">*</span></p>
+                <select id="Department">
+                    <option value="IT">IT</option>
+                    <option value="HR">HR</option>
+                    <option value="Finance">Finance</option>
+                </select>
+            </div>
+            <div class="item">
+                <p>Date of Birth<span class="">*</span></p>
+                <input type="date" id="bdate" />
+                <i class="fas fa-calendar-alt"></i>
+            </div>
+        </div>
+
+        <div id="uploaded"></div>
+
+        <div class="item">
+             <p>Attach your CV<span class="">*</span></p>
+            <input name="cv" type="file" id="cvFile"/>
+        </div>
+        <div id="resStatus"></div>
+        <div class="btn-block">
+            <button type="button" id="submit" class="btn btn-primary">Apply For The Job</button>
+        </div>
+    </form>
+</div>
+ </div><!-- body ends -->
+<script src="../static/js/index.js"></script>
+</body>
+
+
+</html>
