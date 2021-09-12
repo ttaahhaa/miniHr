@@ -17,12 +17,11 @@ services:
 
     networks:
       netBackEnd:
-        ipv4_address: 192.168.0.4
-
+        ipv4_address: 172.19.0.2
 
 networks:
     netBackEnd:
         ipam:
             driver: default
             config:
-                 - subnet: 192.168.0.0/24
+                 - subnet: 172.19.0.0/16

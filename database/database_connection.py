@@ -6,7 +6,7 @@ def db_driver():
         conn = mariadb.connect(
             user="taha",
             password="password1",
-            host="192.168.0.4",
+            host="172.19.0.2",
             port=3306,
             database="miniHR"
 

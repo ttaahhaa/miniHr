@@ -9,7 +9,6 @@ fetch('http://127.0.0.1:5000/data', {
 .then(res =>{
     const parsed = JSON.parse(res)
 
-    console.log(parsed[1]["bdate"])
    for (let i=0; i<parsed.length; i++){
    container.innerHTML+= showApplicants(parsed[i])
    }
@@ -29,7 +28,7 @@ function showApplicants(data_i) {
     return `
         <div class="row_me">
             <span>${data_i['first_name']} ${data_i['last_name']}</span>
-            <span>${data_i['last_name']}</span>
+            <span>${data_i['bdate']}</span>
             <span>${data_i['yearsOfExperience']}</span>
             <span>${data_i['departmentID']}</span>
             <a href='hr/${data_i['ID']}' download><button class ='btn btn-group'>Download CV</button></a>
